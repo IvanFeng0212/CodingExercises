@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "99.UnitTest", "99.UnitTest\99.UnitTest.csproj", "{A7FADD41-E207-4ED0-9DC2-AFC1C2108EA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "99.UnitTest", "99.UnitTest\99.UnitTest.csproj", "{A7FADD41-E207-4ED0-9DC2-AFC1C2108EA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.CodingInterview", "1.CodingInterview\1.CodingInterview.csproj", "{5081425B-7573-4B62-96CE-596A63FA03D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1.CodingInterview", "1.CodingInterview\1.CodingInterview.csproj", "{5081425B-7573-4B62-96CE-596A63FA03D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.KataExercises", "2.KataExercises\2.KataExercises.csproj", "{482B48DB-5CB3-4553-8F1B-972930AC7867}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5081425B-7573-4B62-96CE-596A63FA03D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5081425B-7573-4B62-96CE-596A63FA03D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5081425B-7573-4B62-96CE-596A63FA03D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{482B48DB-5CB3-4553-8F1B-972930AC7867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{482B48DB-5CB3-4553-8F1B-972930AC7867}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{482B48DB-5CB3-4553-8F1B-972930AC7867}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{482B48DB-5CB3-4553-8F1B-972930AC7867}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
