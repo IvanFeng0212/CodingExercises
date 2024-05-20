@@ -42,6 +42,16 @@ namespace _99.UnitTest.KataExercises
             ThenReturnBuzz(WhenInputeNumber(number));
         }
 
+        [TestCase(15)]
+        [TestCase(30)]
+        [TestCase(45)]
+        public void GivenFizzBuzz_WhenInputNumberIsDivisibleBy_3_AND_5_ThenReturnFizzBuzz(int number)
+        {
+            GivenFizzBuzz();
+
+            ThenReturnFizzBuzz(WhenInputeNumber(number));
+        }
+
         private void GivenFizzBuzz()
         {
             _fizzBuzz = new FizzBuzz();
@@ -65,6 +75,11 @@ namespace _99.UnitTest.KataExercises
         private void ThenReturnBuzz(string fizzBuzzResult)
         {
             Assert.That(fizzBuzzResult, Is.EqualTo("Buzz"));
+        }
+
+        private void ThenReturnFizzBuzz(string fizzBuzzResult)
+        {
+            Assert.That(fizzBuzzResult, Is.EqualTo("FizzBuzz"));
         }
     }
 }
