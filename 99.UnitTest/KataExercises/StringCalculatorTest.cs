@@ -39,10 +39,30 @@ namespace _99.UnitTest.KataExercises
         [TestCase("2,3", 5)]
         [TestCase("3,4", 7)]
         [TestCase("4,5", 9)]
-        [TestCase("4,5\n6", 15)]
+        [TestCase(@"4,5\n6", 15)]
         public void GivenStringWithTwoNumbers_WhenInvoke_ThenReturnTheirSum(string inputVal, int expected)
         {
             ThenEqualToExpected(InvokeInputVal(inputVal), expected);
+        }
+
+        [TestCase("1,2,", typeof(ArgumentException))]
+        public void GivenStringWithEndOfSeparator_WhenInvoke_ThenThrowException(string inputVal, Type exceptionType)
+        {
+            ThenThrowException(() => InvokeInputVal(inputVal), exceptionType);
+        }
+
+        [TestCase(@"//,\n1,2", 3)]
+        [TestCase(@"//|\n1|2|3", 6)]
+        [TestCase(@"//sep\n2sep5", 7)]
+        public void GivenStringWithDelimiterFormatNumbers_WhenInvoke_ThenReturnTheirSum(string inputVal, int expected)
+        {
+            ThenEqualToExpected(InvokeInputVal(inputVal), expected);
+        }
+
+        [TestCase(@"//|\n1|2,3", typeof(ArgumentException))]
+        public void GivenStringWithWranDelimiterFormatNumbers_WhenInvoke_ThenThrowException(string inputVal, Type exceptionType)
+        {
+            ThenThrowException(() => InvokeInputVal(inputVal), exceptionType);
         }
 
         private int InvokeInputVal(string inputVal)
@@ -65,6 +85,11 @@ namespace _99.UnitTest.KataExercises
         private void ThenEqualToExpected(int result, int expected)
         {
             Assert.That(result, Is.EqualTo(expected));
+        }
+
+        private void ThenThrowException(Action invoke, Type exceptionType)
+        {
+            Assert.That(invoke, Throws.TypeOf(exceptionType));
         }
     }
 }
